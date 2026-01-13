@@ -19,7 +19,7 @@ header {
   text-align: center;
 }
 
-.phone-list {
+.phone-list, .details {
   padding: 15px;
 }
 
@@ -31,21 +31,28 @@ header {
   display: flex;
   align-items: center;
   box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  cursor: pointer;
 }
 
 .phone img {
   width: 80px;
-  height: auto;
   margin-right: 15px;
 }
 
-.phone h3 {
-  margin: 0;
+.details {
+  display: none;
 }
 
-.phone p {
-  margin: 5px 0 0;
-  color: #555;
+.details img {
+  width: 100%;
+  border-radius: 12px;
+}
+
+.back {
+  margin: 15px 0;
+  display: inline-block;
+  color: #0d47a1;
+  font-weight: bold;
 }
 </style>
 </head>
@@ -57,9 +64,10 @@ header {
   <p>دليل الهواتف الذكية</p>
 </header>
 
-<div class="phone-list">
+<!-- قائمة الهواتف -->
+<div class="phone-list" id="list">
 
-  <div class="phone">
+  <div class="phone" onclick="showDetails('iphone')">
     <img src="https://fdn2.gsmarena.com/vv/bigpic/apple-iphone-15-pro.jpg">
     <div>
       <h3>iPhone 15 Pro</h3>
@@ -67,7 +75,7 @@ header {
     </div>
   </div>
 
-  <div class="phone">
+  <div class="phone" onclick="showDetails('samsung')">
     <img src="https://fdn2.gsmarena.com/vv/bigpic/samsung-galaxy-s24-ultra.jpg">
     <div>
       <h3>Galaxy S24 Ultra</h3>
@@ -75,15 +83,42 @@ header {
     </div>
   </div>
 
-  <div class="phone">
-    <img src="https://fdn2.gsmarena.com/vv/bigpic/xiaomi-14.jpg">
-    <div>
-      <h3>Xiaomi 14</h3>
-      <p>Xiaomi</p>
-    </div>
-  </div>
+</div>
+
+<!-- صفحة التفاصيل -->
+<div class="details" id="details">
+
+  <a class="back" onclick="goBack()">← رجوع</a>
+
+  <img id="d-img">
+  <h2 id="d-name"></h2>
+  <p id="d-specs"></p>
 
 </div>
+
+<script>
+function showDetails(phone) {
+  document.getElementById("list").style.display = "none";
+  document.getElementById("details").style.display = "block";
+
+  if (phone === "iphone") {
+    d-img.src = "https://fdn2.gsmarena.com/vv/bigpic/apple-iphone-15-pro.jpg";
+    d-name.innerText = "iPhone 15 Pro";
+    d-specs.innerText = "A17 Pro • كاميرا 48MP • شاشة 120Hz • بطارية قوية";
+  }
+
+  if (phone === "samsung") {
+    d-img.src = "https://fdn2.gsmarena.com/vv/bigpic/samsung-galaxy-s24-ultra.jpg";
+    d-name.innerText = "Galaxy S24 Ultra";
+    d-specs.innerText = "Snapdragon 8 Gen 3 • كاميرا 200MP • قلم S-Pen";
+  }
+}
+
+function goBack() {
+  document.getElementById("details").style.display = "none";
+  document.getElementById("list").style.display = "block";
+}
+</script>
 
 </body>
 </html>
