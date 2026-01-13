@@ -7,97 +7,31 @@
 
 <style>
 body {
-  margin: 0;
   font-family: Arial, sans-serif;
-  background: #f5f7fa;
+  background: #f2f2f2;
+  margin: 0;
 }
-
 header {
-  background: linear-gradient(135deg, #0d47a1, #1976d2);
+  background: #0d47a1;
   color: white;
-  padding: 25px 15px;
+  padding: 20px;
   text-align: center;
 }
-
-header h1 {
-  margin: 0;
-  font-size: 26px;
-}
-
-header p {
-  margin-top: 5px;
-  opacity: 0.9;
-}
-
 #phones {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 15px;
-  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
-
 .card {
   background: white;
-  border-radius: 16px;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
-  overflow: hidden;
-  transition: transform 0.2s;
+  width: 300px;
+  margin: 10px;
+  padding: 15px;
+  border-radius: 10px;
 }
-
-.card:hover {
-  transform: translateY(-5px);
-}
-
 .card img {
   width: 100%;
-  height: 220px;
-  object-fit: contain;
-  background: #fafafa;
-}
-
-.card-content {
-  padding: 15px;
-}
-
-.card h3 {
-  margin: 0 0 8px;
-  font-size: 18px;
-}
-
-.price {
-  color: #0d47a1;
-  font-weight: bold;
-  margin-bottom: 10px;
-}
-
-.spec {
-  font-size: 14px;
-  color: #555;
-  margin: 4px 0;
-}
-
-.colors {
-  margin-top: 10px;
-}
-
-.color-dot {
-  display: inline-block;
-  width: 16px;
-  height: 16px;
-  border-radius: 50%;
-  margin-left: 5px;
-  border: 1px solid #ccc;
-}
-
-button {
-  width: 100%;
-  margin-top: 12px;
-  padding: 10px;
-  border: none;
-  border-radius: 10px;
-  background: #1976d2;
-  color: white;
-  font-size: 15px;
+  border-radius: 8px;
 }
 </style>
 </head>
@@ -106,42 +40,34 @@ button {
 
 <header>
   <h1>Ugarit Future</h1>
-  <p>دليل الهواتف الذكية • مواصفات • مقارنة</p>
+  <p>دليل الهواتف الذكية</p>
 </header>
 
 <div id="phones">جاري التحميل...</div>
 
 <script>
-fetch('https://amoornasa338-create.github.io/ugarit-future/phones.json')
+fetch('phones.json')
   .then(res => res.json())
   .then(data => {
+    const phones = data.phones;
     const container = document.getElementById('phones');
     container.innerHTML = '';
-
-    data.phones.forEach(p => {
-      const colors = p.colors || ["#000", "#fff", "#2196f3"];
-
+    phones.forEach(p => {
       container.innerHTML += `
         <div class="card">
           <img src="${p.image}">
-          <div class="card-content">
-            <h3>${p.name}</h3>
-            <div class="price">${p.price}$</div>
-            <div class="spec">المعالج: ${p.specs.processor}</div>
-            <div class="spec">الشاشة: ${p.specs.screen}</div>
-            <div class="spec">الكاميرا: ${p.specs.camera}</div>
-            <div class="spec">البطارية: ${p.specs.battery}</div>
-
-            <div class="colors">
-              الألوان:
-              ${colors.map(c => `<span class="color-dot" style="background:${c}"></span>`).join('')}
-            </div>
-
-            <button>عرض التفاصيل</button>
-          </div>
+          <h3>${p.name}</h3>
+          <p>السعر: ${p.price}$</p>
+          <p>المعالج: ${p.specs.processor}</p>
+          <p>الشاشة: ${p.specs.screen}</p>
+          <p>الكاميرا: ${p.specs.camera}</p>
+          <p>البطارية: ${p.specs.battery}</p>
         </div>
       `;
     });
+  })
+  .catch(() => {
+    document.getElementById('phones').innerText = 'حدث خطأ في تحميل البيانات';
   });
 </script>
 
