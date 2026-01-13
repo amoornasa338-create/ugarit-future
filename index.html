@@ -7,43 +7,37 @@
 
 <style>
 body {
-  margin: 0;
   font-family: Arial, sans-serif;
-  background: #f2f2f2;
+  background: #f4f6f8;
+  margin: 0;
+  padding: 0;
 }
 header {
   background: #0d47a1;
   color: white;
-  padding: 15px;
+  padding: 20px;
   text-align: center;
 }
-.phone {
-  background: white;
-  margin: 15px;
+input, button {
   padding: 10px;
-  border-radius: 12px;
+  margin: 5px;
+  width: 90%;
+  max-width: 400px;
+}
+#phones {
   display: flex;
-  align-items: center;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-  cursor: pointer;
+  flex-wrap: wrap;
+  justify-content: center;
 }
-.phone img {
-  width: 80px;
-  margin-right: 15px;
-}
-#details {
-  display: none;
+.card {
+  background: white;
+  width: 300px;
+  margin: 10px;
   padding: 15px;
+  border-radius: 10px;
 }
-#details img {
+.card img {
   width: 100%;
-  border-radius: 12px;
-}
-.back {
-  color: #0d47a1;
-  font-weight: bold;
-  margin-bottom: 10px;
-  display: inline-block;
 }
 </style>
 </head>
@@ -52,57 +46,76 @@ header {
 
 <header>
   <h1>Ugarit Future</h1>
-  <p>دليل الهواتف الذكية</p>
+  <p>ابحث • قارن • اختر بذكاء</p>
 </header>
 
-<div id="list">
-  <div class="phone" onclick="show('iphone')">
-    <img src="https://fdn2.gsmarena.com/vv/bigpic/apple-iphone-15-pro.jpg">
-    <div>
-      <h3>iPhone 15 Pro</h3>
-      <p>Apple</p>
-    </div>
-  </div>
+<center>
+<input type="text" id="search" placeholder="ابحث عن هاتف أو شركة">
+<button onclick="searchPhones()">بحث</button>
+<button onclick="startVoice()">🎙️ بحث صوتي</button>
 
-  <div class="phone" onclick="show('samsung')">
-    <img src="https://fdn2.gsmarena.com/vv/bigpic/samsung-galaxy-s24-ultra.jpg">
-    <div>
-      <h3>Galaxy S24 Ultra</h3>
-      <p>Samsung</p>
-    </div>
-  </div>
-</div>
+<input type="number" id="budget" placeholder="أدخل ميزانيتك بالدولار">
+<button onclick="filterByBudget()">بحث حسب الميزانية</button>
+</center>
 
-<div id="details">
-  <span class="back" onclick="back()">← رجوع</span>
-  <img id="img">
-  <h2 id="name"></h2>
-  <p id="specs"></p>
-</div>
+<div id="phones"></div>
 
 <script>
-function show(phone){
-  document.getElementById("list").style.display="none";
-  document.getElementById("details").style.display="block";
+let allPhones = [];
 
-  var img=document.getElementById("img");
-  var name=document.getElementById("name");
-  var specs=document.getElementById("specs");
+fetch('phones.json')
+  .then(res => res.json())
+  .then(data => {
+    allPhones = data.phones;
+    showPhones(allPhones);
+  });
 
-  if(phone==="iphone"){
-    img.src="https://fdn2.gsmarena.com/vv/bigpic/apple-iphone-15-pro.jpg";
-    name.innerText="iPhone 15 Pro";
-    specs.innerText="A17 Pro • كاميرا 48MP • شاشة 120Hz";
-  }
-  if(phone==="samsung"){
-    img.src="https://fdn2.gsmarena.com/vv/bigpic/samsung-galaxy-s24-ultra.jpg";
-    name.innerText="Galaxy S24 Ultra";
-    specs.innerText="Snapdragon 8 Gen 3 • كاميرا 200MP • S-Pen";
-  }
+function showPhones(phones) {
+  const container = document.getElementById('phones');
+  container.innerHTML = '';
+  phones.forEach(phone => {
+    container.innerHTML += `
+      <div class="card">
+        <h3>${phone.name}</h3>
+        <img src="${phone.image}">
+        <p><b>السعر:</b> ${phone.price}$</p>
+        <p><b>المعالج:</b> ${phone.specs.processor}</p>
+        <p><b>الشاشة:</b> ${phone.specs.screen}</p>
+        <p><b>الكاميرا:</b> ${phone.specs.camera}</p>
+        <p><b>البطارية:</b> ${phone.specs.battery}</p>
+        <p><b>المميزات:</b> ${phone.pros.join(', ')}</p>
+        <p><b>العيوب:</b> ${phone.cons.join(', ')}</p>
+      </div>
+    `;
+  });
 }
-function back(){
-  document.getElementById("details").style.display="none";
-  document.getElementById("list").style.display="block";
+
+function searchPhones() {
+  const q = document.getElementById('search').value.toLowerCase();
+  showPhones(allPhones.filter(p =>
+    p.name.toLowerCase().includes(q) ||
+    p.brand.toLowerCase().includes(q)
+  ));
+}
+
+function filterByBudget() {
+  const b = document.getElementById('budget').value;
+  showPhones(allPhones.filter(p => p.price <= b));
+}
+
+// 🎙️ البحث الصوتي
+function startVoice() {
+  if (!('webkitSpeechRecognition' in window)) {
+    alert('البحث الصوتي غير مدعوم');
+    return;
+  }
+  const rec = new webkitSpeechRecognition();
+  rec.lang = 'ar';
+  rec.start();
+  rec.onresult = e => {
+    document.getElementById('search').value = e.results[0][0].transcript;
+    searchPhones();
+  };
 }
 </script>
 
