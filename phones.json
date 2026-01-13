@@ -11,31 +11,21 @@
         "processor": "Apple A15 Bionic",
         "screen": "6.1 OLED",
         "camera": "12MP Dual",
+        "camera_details": "Wide f/1.6, OIS",
+        "video": "4K@60fps",
         "battery": "3240 mAh",
-        "os": "iOS"
+        "charging": "20W",
+        "audio": "Stereo speakers",
+        "jack": "No 3.5mm jack",
+        "os": "iOS",
+        "colors": ["Black", "White", "Blue", "Red"]
       },
       "pros": ["أداء قوي", "كاميرا ممتازة", "دعم طويل"],
       "cons": ["سعر مرتفع", "شحن بطيء"]
     },
+
     {
       "id": 2,
-      "brand": "Apple",
-      "name": "iPhone 11",
-      "price": 399,
-      "category": "متوسط",
-      "image": "https://fdn2.gsmarena.com/vv/bigpic/apple-iphone-11.jpg",
-      "specs": {
-        "processor": "Apple A13 Bionic",
-        "screen": "6.1 LCD",
-        "camera": "12MP Dual",
-        "battery": "3110 mAh",
-        "os": "iOS"
-      },
-      "pros": ["أداء مستقر", "كاميرا جيدة"],
-      "cons": ["شاشة LCD", "تصميم قديم"]
-    },
-    {
-      "id": 3,
       "brand": "Samsung",
       "name": "Galaxy S23",
       "price": 799,
@@ -45,31 +35,21 @@
         "processor": "Snapdragon 8 Gen 2",
         "screen": "6.1 AMOLED 120Hz",
         "camera": "50MP",
+        "camera_details": "Wide f/1.8, OIS",
+        "video": "8K@30fps",
         "battery": "3900 mAh",
-        "os": "Android"
+        "charging": "25W",
+        "audio": "Stereo speakers",
+        "jack": "No 3.5mm jack",
+        "os": "Android",
+        "colors": ["Black", "Cream", "Green", "Lavender"]
       },
       "pros": ["شاشة ممتازة", "أداء قوي"],
       "cons": ["سعر مرتفع"]
     },
+
     {
-      "id": 4,
-      "brand": "Samsung",
-      "name": "Galaxy A54",
-      "price": 349,
-      "category": "متوسط",
-      "image": "https://fdn2.gsmarena.com/vv/bigpic/samsung-galaxy-a54.jpg",
-      "specs": {
-        "processor": "Exynos 1380",
-        "screen": "6.4 AMOLED",
-        "camera": "50MP",
-        "battery": "5000 mAh",
-        "os": "Android"
-      },
-      "pros": ["بطارية قوية", "شاشة AMOLED"],
-      "cons": ["أداء متوسط"]
-    },
-    {
-      "id": 5,
+      "id": 3,
       "brand": "Xiaomi",
       "name": "Redmi Note 12",
       "price": 199,
@@ -79,28 +59,17 @@
         "processor": "Snapdragon 685",
         "screen": "6.67 AMOLED",
         "camera": "50MP",
+        "camera_details": "Wide f/1.8",
+        "video": "1080p",
         "battery": "5000 mAh",
-        "os": "Android"
+        "charging": "33W",
+        "audio": "Mono speaker",
+        "jack": "3.5mm jack",
+        "os": "Android",
+        "colors": ["Black", "Blue", "Green"]
       },
       "pros": ["سعر ممتاز", "شاشة AMOLED"],
       "cons": ["أداء محدود"]
-    },
-    {
-      "id": 6,
-      "brand": "Infinix",
-      "name": "Hot 30",
-      "price": 149,
-      "category": "اقتصادي",
-      "image": "https://fdn2.gsmarena.com/vv/bigpic/infinix-hot-30.jpg",
-      "specs": {
-        "processor": "Helio G88",
-        "screen": "6.78 LCD",
-        "camera": "50MP",
-        "battery": "5000 mAh",
-        "os": "Android"
-      },
-      "pros": ["سعر منخفض", "بطارية جيدة"],
-      "cons": ["شاشة LCD", "كاميرا عادية"]
     }
   ]
 }
