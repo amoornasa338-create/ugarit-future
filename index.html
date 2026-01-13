@@ -4,53 +4,86 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Ugarit Future</title>
+
 <style>
 body {
   margin: 0;
   font-family: Arial, sans-serif;
-  background: linear-gradient(135deg, #0d47a1, #1976d2);
+  background: #f2f2f2;
+}
+
+header {
+  background: #0d47a1;
   color: white;
+  padding: 15px;
   text-align: center;
 }
-.container {
-  padding: 30px 15px;
+
+.phone-list {
+  padding: 15px;
 }
-.logo {
-  font-size: 48px;
-  margin-top: 40px;
-}
-h1 {
-  margin: 15px 0 10px;
-}
-p {
-  opacity: 0.9;
-  font-size: 16px;
-}
-button {
-  margin-top: 30px;
-  padding: 15px 25px;
-  font-size: 18px;
+
+.phone {
   background: white;
-  color: #0d47a1;
-  border: none;
-  border-radius: 30px;
+  border-radius: 12px;
+  margin-bottom: 15px;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
 }
-.footer {
-  margin-top: 50px;
-  font-size: 13px;
-  opacity: 0.7;
+
+.phone img {
+  width: 80px;
+  height: auto;
+  margin-right: 15px;
+}
+
+.phone h3 {
+  margin: 0;
+}
+
+.phone p {
+  margin: 5px 0 0;
+  color: #555;
 }
 </style>
 </head>
+
 <body>
-<div class="container">
-  <div class="logo">📱</div>
+
+<header>
   <h1>Ugarit Future</h1>
-  <p>دليل الهواتف الذكية الشامل<br>مواصفات • صور • مقارنة</p>
-  <button>ابدأ الاستكشاف</button>
-  <div class="footer">
-    © 2026 Ugarit Future
+  <p>دليل الهواتف الذكية</p>
+</header>
+
+<div class="phone-list">
+
+  <div class="phone">
+    <img src="https://fdn2.gsmarena.com/vv/bigpic/apple-iphone-15-pro.jpg">
+    <div>
+      <h3>iPhone 15 Pro</h3>
+      <p>Apple</p>
+    </div>
   </div>
+
+  <div class="phone">
+    <img src="https://fdn2.gsmarena.com/vv/bigpic/samsung-galaxy-s24-ultra.jpg">
+    <div>
+      <h3>Galaxy S24 Ultra</h3>
+      <p>Samsung</p>
+    </div>
+  </div>
+
+  <div class="phone">
+    <img src="https://fdn2.gsmarena.com/vv/bigpic/xiaomi-14.jpg">
+    <div>
+      <h3>Xiaomi 14</h3>
+      <p>Xiaomi</p>
+    </div>
+  </div>
+
 </div>
+
 </body>
 </html>
