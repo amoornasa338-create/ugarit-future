@@ -46,25 +46,27 @@ header {
 <div id="phones">جاري التحميل...</div>
 
 <script>
-fetch('phones.json')
-  .then(res => res.json())
-  .then(data => {
-    const phones = data.phones;
-    const container = document.getElementById('phones');
-    container.innerHTML = '';
-    phones.forEach(p => {
-      container.innerHTML += `
-        <div class="card">
-          <img src="${p.image}">
-          <h3>${p.name}</h3>
-          <p>السعر: ${p.price}$</p>
-          <p>المعالج: ${p.specs.processor}</p>
-          <p>الشاشة: ${p.specs.screen}</p>
-          <p>الكاميرا: ${p.specs.camera}</p>
-          <p>البطارية: ${p.specs.battery}</p>
-        </div>
-      `;
-    });
+phones.forEach(p => {
+  container.innerHTML += `
+    <div class="card">
+      <img src="${p.image}">
+      <h3>${p.name}</h3>
+
+      <p><strong>السعر:</strong> ${p.price}$</p>
+      <p><strong>المعالج:</strong> ${p.specs.processor}</p>
+      <p><strong>الشاشة:</strong> ${p.specs.screen}</p>
+      <p><strong>الكاميرا:</strong> ${p.specs.camera}</p>
+      <p><strong>تفاصيل الكاميرا:</strong> ${p.specs.camera_details}</p>
+      <p><strong>الفيديو:</strong> ${p.specs.video}</p>
+      <p><strong>البطارية:</strong> ${p.specs.battery}</p>
+      <p><strong>الشحن:</strong> ${p.specs.charging}</p>
+      <p><strong>الصوت:</strong> ${p.specs.audio}</p>
+      <p><strong>منفذ السماعات:</strong> ${p.specs.jack}</p>
+      <p><strong>النظام:</strong> ${p.specs.os}</p>
+      <p><strong>الألوان:</strong> ${p.specs.colors.join(" ، ")}</p>
+    </div>
+  `;
+});
   })
   .catch(() => {
     document.getElementById('phones').innerText = 'حدث خطأ في تحميل البيانات';
