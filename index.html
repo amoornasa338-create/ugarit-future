@@ -11,48 +11,39 @@ body {
   font-family: Arial, sans-serif;
   background: #f2f2f2;
 }
-
 header {
   background: #0d47a1;
   color: white;
   padding: 15px;
   text-align: center;
 }
-
-.phone-list, .details {
-  padding: 15px;
-}
-
 .phone {
   background: white;
-  border-radius: 12px;
-  margin-bottom: 15px;
+  margin: 15px;
   padding: 10px;
+  border-radius: 12px;
   display: flex;
   align-items: center;
   box-shadow: 0 2px 6px rgba(0,0,0,0.1);
   cursor: pointer;
 }
-
 .phone img {
   width: 80px;
   margin-right: 15px;
 }
-
-.details {
+#details {
   display: none;
+  padding: 15px;
 }
-
-.details img {
+#details img {
   width: 100%;
   border-radius: 12px;
 }
-
 .back {
-  margin: 15px 0;
-  display: inline-block;
   color: #0d47a1;
   font-weight: bold;
+  margin-bottom: 10px;
+  display: inline-block;
 }
 </style>
 </head>
@@ -64,10 +55,8 @@ header {
   <p>دليل الهواتف الذكية</p>
 </header>
 
-<!-- قائمة الهواتف -->
-<div class="phone-list" id="list">
-
-  <div class="phone" onclick="showDetails('iphone')">
+<div id="list">
+  <div class="phone" onclick="show('iphone')">
     <img src="https://fdn2.gsmarena.com/vv/bigpic/apple-iphone-15-pro.jpg">
     <div>
       <h3>iPhone 15 Pro</h3>
@@ -75,48 +64,45 @@ header {
     </div>
   </div>
 
-  <div class="phone" onclick="showDetails('samsung')">
+  <div class="phone" onclick="show('samsung')">
     <img src="https://fdn2.gsmarena.com/vv/bigpic/samsung-galaxy-s24-ultra.jpg">
     <div>
       <h3>Galaxy S24 Ultra</h3>
       <p>Samsung</p>
     </div>
   </div>
-
 </div>
 
-<!-- صفحة التفاصيل -->
-<div class="details" id="details">
-
-  <a class="back" onclick="goBack()">← رجوع</a>
-
-  <img id="d-img">
-  <h2 id="d-name"></h2>
-  <p id="d-specs"></p>
-
+<div id="details">
+  <span class="back" onclick="back()">← رجوع</span>
+  <img id="img">
+  <h2 id="name"></h2>
+  <p id="specs"></p>
 </div>
 
 <script>
-function showDetails(phone) {
-  document.getElementById("list").style.display = "none";
-  document.getElementById("details").style.display = "block";
+function show(phone){
+  document.getElementById("list").style.display="none";
+  document.getElementById("details").style.display="block";
 
-  if (phone === "iphone") {
-    d-img.src = "https://fdn2.gsmarena.com/vv/bigpic/apple-iphone-15-pro.jpg";
-    d-name.innerText = "iPhone 15 Pro";
-    d-specs.innerText = "A17 Pro • كاميرا 48MP • شاشة 120Hz • بطارية قوية";
+  var img=document.getElementById("img");
+  var name=document.getElementById("name");
+  var specs=document.getElementById("specs");
+
+  if(phone==="iphone"){
+    img.src="https://fdn2.gsmarena.com/vv/bigpic/apple-iphone-15-pro.jpg";
+    name.innerText="iPhone 15 Pro";
+    specs.innerText="A17 Pro • كاميرا 48MP • شاشة 120Hz";
   }
-
-  if (phone === "samsung") {
-    d-img.src = "https://fdn2.gsmarena.com/vv/bigpic/samsung-galaxy-s24-ultra.jpg";
-    d-name.innerText = "Galaxy S24 Ultra";
-    d-specs.innerText = "Snapdragon 8 Gen 3 • كاميرا 200MP • قلم S-Pen";
+  if(phone==="samsung"){
+    img.src="https://fdn2.gsmarena.com/vv/bigpic/samsung-galaxy-s24-ultra.jpg";
+    name.innerText="Galaxy S24 Ultra";
+    specs.innerText="Snapdragon 8 Gen 3 • كاميرا 200MP • S-Pen";
   }
 }
-
-function goBack() {
-  document.getElementById("details").style.display = "none";
-  document.getElementById("list").style.display = "block";
+function back(){
+  document.getElementById("details").style.display="none";
+  document.getElementById("list").style.display="block";
 }
 </script>
 
