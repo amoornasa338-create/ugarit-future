@@ -53,6 +53,151 @@
         "os": "Android",
         "colors": ["Black", "Blue"]
       }
+    },
+    {
+      "name": "OnePlus 12",
+      "price": 899,
+      "image": "https://i.imgur.com/7mYzK4Z.png",
+      "specs": {
+        "processor": "Snapdragon 8 Gen 3",
+        "screen": "6.82 AMOLED 120Hz",
+        "camera": "50 MP",
+        "camera_details": "Hasselblad",
+        "video": "4K",
+        "battery": "5400 mAh",
+        "charging": "100W",
+        "audio": "Stereo",
+        "jack": "No",
+        "os": "Android",
+        "colors": ["Black", "Green"]
+      }
+    },
+    {
+      "name": "Xiaomi 13 Pro",
+      "price": 850,
+      "image": "https://i.imgur.com/9X9w2lK.png",
+      "specs": {
+        "processor": "Snapdragon 8 Gen 2",
+        "screen": "6.73 AMOLED",
+        "camera": "50 MP",
+        "camera_details": "Leica Lens",
+        "video": "8K",
+        "battery": "4820 mAh",
+        "charging": "120W",
+        "audio": "Stereo",
+        "jack": "No",
+        "os": "Android",
+        "colors": ["Black", "White"]
+      }
+    },
+
+    {
+      "name": "Samsung Galaxy S23",
+      "price": 800,
+      "image": "https://i.imgur.com/WZz6Y7p.png",
+      "specs": {
+        "processor": "Snapdragon 8 Gen 2",
+        "screen": "6.1 AMOLED 120Hz",
+        "camera": "50 MP",
+        "camera_details": "OIS",
+        "video": "8K",
+        "battery": "3900 mAh",
+        "charging": "25W",
+        "audio": "Stereo",
+        "jack": "No",
+        "os": "Android",
+        "colors": ["Black", "Green"]
+      }
+    },
+    {
+      "name": "iPhone 14",
+      "price": 900,
+      "image": "https://i.imgur.com/6d9H4aC.png",
+      "specs": {
+        "processor": "Apple A15",
+        "screen": "6.1 OLED",
+        "camera": "12 MP",
+        "camera_details": "Dual OIS",
+        "video": "4K",
+        "battery": "3279 mAh",
+        "charging": "20W",
+        "audio": "Stereo",
+        "jack": "No",
+        "os": "iOS",
+        "colors": ["Black", "Blue"]
+      }
+    },
+    {
+      "name": "iPhone 13",
+      "price": 700,
+      "image": "https://i.imgur.com/m2ZyK4M.png",
+      "specs": {
+        "processor": "Apple A15",
+        "screen": "6.1 OLED",
+        "camera": "12 MP",
+        "camera_details": "Dual",
+        "video": "4K",
+        "battery": "3240 mAh",
+        "charging": "20W",
+        "audio": "Stereo",
+        "jack": "No",
+        "os": "iOS",
+        "colors": ["Black", "Pink"]
+      }
+    },
+    {
+      "name": "Samsung Galaxy A54",
+      "price": 400,
+      "image": "https://i.imgur.com/7qv9K4H.png",
+      "specs": {
+        "processor": "Exynos 1380",
+        "screen": "6.4 AMOLED 120Hz",
+        "camera": "50 MP",
+        "camera_details": "OIS",
+        "video": "4K",
+        "battery": "5000 mAh",
+        "charging": "25W",
+        "audio": "Stereo",
+        "jack": "No",
+        "os": "Android",
+        "colors": ["Black", "Purple"]
+      }
+    },
+    {
+      "name": "Xiaomi Redmi Note 12",
+      "price": 200,
+      "image": "https://i.imgur.com/Jh9Z1qE.png",
+      "specs": {
+        "processor": "Snapdragon 685",
+        "screen": "6.67 AMOLED",
+        "camera": "50 MP",
+        "camera_details": "Wide",
+        "video": "1080p",
+        "battery": "5000 mAh",
+        "charging": "33W",
+        "audio": "Mono",
+        "jack": "Yes",
+        "os": "Android",
+        "colors": ["Black", "Blue"]
+      }
+    },
+    {
+      "name": "Infinix Hot 10T",
+      "price": 150,
+      "image": "https://i.imgur.com/RnJQe8Q.png",
+      "specs": {
+        "processor": "Helio G70",
+        "screen": "6.82 LCD",
+        "camera": "48 MP",
+        "camera_details": "Triple",
+        "video": "1080p",
+        "battery": "5000 mAh",
+        "charging": "18W",
+        "audio": "Mono",
+        "jack": "Yes",
+        "os": "Android",
+        "colors": ["Black", "Purple"]
+      }
     }
   ]
 }
