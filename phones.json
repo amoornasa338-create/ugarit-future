@@ -1,25 +1,20 @@
 {
   "phones": [
     {
-      "id": 1,
       "brand": "Apple",
       "name": "iPhone 13",
       "price": 699,
       "category": "رائد",
       "image": "https://fdn2.gsmarena.com/vv/bigpic/apple-iphone-13.jpg",
       "specs": {
-        "processor": "A15 Bionic",
+        "processor": "A15",
         "screen": "6.1 OLED",
-        "camera": "12MP Dual",
-        "video": "4K@60fps",
-        "battery": "3240 mAh",
-        "charging": "20W",
-        "os": "iOS",
-        "colors": ["Black", "White", "Red", "Blue"]
+        "camera": "12MP",
+        "battery": "3240mAh",
+        "colors": ["Black","White","Red","Blue"]
       }
     },
     {
-      "id": 2,
       "brand": "Samsung",
       "name": "Galaxy S23",
       "price": 799,
@@ -27,17 +22,13 @@
       "image": "https://fdn2.gsmarena.com/vv/bigpic/samsung-galaxy-s23.jpg",
       "specs": {
         "processor": "Snapdragon 8 Gen 2",
-        "screen": "6.1 AMOLED 120Hz",
+        "screen": "AMOLED 120Hz",
         "camera": "50MP",
-        "video": "8K",
-        "battery": "3900 mAh",
-        "charging": "25W",
-        "os": "Android",
-        "colors": ["Black", "Green", "Lavender"]
+        "battery": "3900mAh",
+        "colors": ["Black","Green","Lavender"]
       }
     },
     {
-      "id": 3,
       "brand": "Xiaomi",
       "name": "Redmi Note 12",
       "price": 199,
@@ -47,15 +38,11 @@
         "processor": "Snapdragon 685",
         "screen": "6.67 AMOLED",
         "camera": "50MP",
-        "video": "1080p",
-        "battery": "5000 mAh",
-        "charging": "33W",
-        "os": "Android",
-        "colors": ["Black", "Blue", "Green"]
+        "battery": "5000mAh",
+        "colors": ["Black","Blue","Green"]
       }
     },
     {
-      "id": 4,
       "brand": "Infinix",
       "name": "Hot 10T",
       "price": 150,
@@ -65,15 +52,11 @@
         "processor": "Helio G70",
         "screen": "6.82 IPS",
         "camera": "48MP",
-        "video": "1080p",
-        "battery": "5000 mAh",
-        "charging": "18W",
-        "os": "Android",
-        "colors": ["Black", "Purple", "Blue"]
+        "battery": "5000mAh",
+        "colors": ["Black","Purple"]
       }
     },
     {
-      "id": 5,
       "brand": "Huawei",
       "name": "Nova 9",
       "price": 430,
@@ -81,13 +64,10 @@
       "image": "https://fdn2.gsmarena.com/vv/bigpic/huawei-nova-9.jpg",
       "specs": {
         "processor": "Snapdragon 778G",
-        "screen": "6.57 OLED 120Hz",
+        "screen": "OLED 120Hz",
         "camera": "50MP",
-        "video": "4K",
-        "battery": "4300 mAh",
-        "charging": "66W",
-        "os": "HarmonyOS",
-        "colors": ["Black", "Green", "Blue"]
+        "battery": "4300mAh",
+        "colors": ["Black","Green","Blue"]
       }
     }
   ]
