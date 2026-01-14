@@ -8,76 +8,35 @@
 <style>
 body {
   font-family: Arial, sans-serif;
-  background: #f2f2f2;
+  background: #f1f1f1;
   margin: 0;
 }
-
 header {
-  background: linear-gradient(135deg, #0d47a1, #1976d2);
+  background: #0d47a1;
   color: white;
-  padding: 25px 15px;
+  padding: 20px;
   text-align: center;
 }
-
-header h1 {
-  margin: 0;
-  font-size: 28px;
-}
-
-header p {
-  margin: 5px 0 0;
-  opacity: 0.9;
-}
-
 #phones {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  padding: 15px;
+  padding: 10px;
 }
-
 .card {
   background: white;
-  width: 320px;
+  width: 300px;
   margin: 10px;
   padding: 15px;
   border-radius: 12px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
 }
-
 .card img {
   width: 100%;
   border-radius: 10px;
 }
-
 .card h3 {
-  margin: 10px 0 5px;
-}
-
-.card hr {
-  border: none;
-  border-top: 1px solid #eee;
   margin: 10px 0;
-}
-
-.card p {
-  margin: 4px 0;
-  font-size: 14px;
-}
-
-.card ul {
-  padding-right: 18px;
-  margin: 5px 0;
-}
-
-.card li {
-  font-size: 14px;
-}
-
-.price {
-  color: #0d47a1;
-  font-weight: bold;
-  font-size: 16px;
 }
 </style>
 </head>
@@ -86,60 +45,40 @@ header p {
 
 <header>
   <h1>Ugarit Future</h1>
-  <p>دليل الهواتف الذكية الشامل • مواصفات • صور • مقارنة</p>
+  <p>دليل شامل للهواتف الذكية</p>
 </header>
 
-<div id="phones">جاري تحميل الهواتف...</div>
+<div id="phones">جاري تحميل الأجهزة...</div>
 
 <script>
-const container = document.getElementById('phones');
+const container = document.getElementById("phones");
 
-fetch('https://amoornasa338-create.github.io/ugarit-future/phones.json')
-  .then(response => response.json())
-  .then(data => {
-    const phones = data.phones;
-    container.innerHTML = '';
-
-    phones.forEach(p => {
-      container.innerHTML += `
-        <div class="card">
-          <img src="${p.image}" alt="${p.name}">
-          <h3>${p.name}</h3>
-          <p class="price">السعر: ${p.price}$</p>
-          <p><strong>الفئة:</strong> ${p.category}</p>
-
-          <hr>
-
-          <p><strong>المعالج:</strong> ${p.specs.processor}</p>
-          <p><strong>الشاشة:</strong> ${p.specs.screen}</p>
-          <p><strong>الكاميرا:</strong> ${p.specs.camera}</p>
-          <p><strong>تفاصيل الكاميرا:</strong> ${p.specs.camera_details}</p>
-          <p><strong>الفيديو:</strong> ${p.specs.video}</p>
-          <p><strong>البطارية:</strong> ${p.specs.battery}</p>
-          <p><strong>الشحن:</strong> ${p.specs.charging}</p>
-          <p><strong>الصوت:</strong> ${p.specs.audio}</p>
-          <p><strong>منفذ السماعات:</strong> ${p.specs.jack}</p>
-          <p><strong>النظام:</strong> ${p.specs.os}</p>
-          <p><strong>الألوان:</strong> ${p.specs.colors.join(" ، ")}</p>
-
-          <hr>
-
-          <p><strong>المميزات:</strong></p>
-          <ul>
-            ${p.pros.map(item => `<li>${item}</li>`).join("")}
-          </ul>
-
-          <p><strong>العيوب:</strong></p>
-          <ul>
-            ${p.cons.map(item => `<li>${item}</li>`).join("")}
-          </ul>
-        </div>
-      `;
-    });
-  })
-  .catch(() => {
-    container.innerText = 'حدث خطأ في تحميل البيانات';
+fetch("phones.json")
+.then(res => res.json())
+.then(data => {
+  container.innerHTML = "";
+  data.phones.forEach(p => {
+    container.innerHTML += `
+      <div class="card">
+        <img src="${p.image}" onerror="this.src='https://via.placeholder.com/300?text=No+Image'">
+        <h3>${p.brand} ${p.name}</h3>
+        <p><strong>السعر:</strong> ${p.price}$</p>
+        <p><strong>الفئة:</strong> ${p.category}</p>
+        <p><strong>المعالج:</strong> ${p.specs.processor}</p>
+        <p><strong>الشاشة:</strong> ${p.specs.screen}</p>
+        <p><strong>الكاميرا:</strong> ${p.specs.camera}</p>
+        <p><strong>الفيديو:</strong> ${p.specs.video}</p>
+        <p><strong>البطارية:</strong> ${p.specs.battery}</p>
+        <p><strong>الشحن:</strong> ${p.specs.charging}</p>
+        <p><strong>النظام:</strong> ${p.specs.os}</p>
+        <p><strong>الألوان:</strong> ${p.specs.colors.join(" ، ")}</p>
+      </div>
+    `;
   });
+})
+.catch(() => {
+  container.innerText = "فشل تحميل البيانات";
+});
 </script>
 
 </body>
