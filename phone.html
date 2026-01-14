@@ -7,66 +7,76 @@
 
 <style>
 body {
-  margin:0;
-  background:#05050a;
-  color:#f0f0f0;
-  font-family:Arial,sans-serif;
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #05050a;
+  color: #f0f0f0;
 }
 header {
-  text-align:center;
-  padding:15px;
-  border-bottom:2px solid #d4af37;
+  padding: 15px;
+  text-align: center;
+  border-bottom: 2px solid #d4af37;
 }
 header h1 {
-  color:#d4af37;
-  margin:0;
+  margin: 0;
+  color: #d4af37;
 }
 .container {
-  max-width:800px;
-  margin:auto;
-  padding:20px;
+  padding: 20px;
+  max-width: 900px;
+  margin: auto;
 }
 .phone-img {
-  text-align:center;
+  text-align: center;
 }
 .phone-img img {
-  max-width:260px;
-  border-radius:18px;
-  background:#fff;
+  max-width: 260px;
+  border-radius: 20px;
+  background: #fff;
 }
 .price {
-  text-align:center;
-  font-size:22px;
-  color:#c0c0c0;
-  margin:10px 0;
+  font-size: 22px;
+  color: #c0c0c0;
+  text-align: center;
+  margin: 10px 0;
 }
+.badge {
+  display: inline-block;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 14px;
+  margin: 8px auto;
+  text-align: center;
+}
+.game { background: #d4af37; color: #000; }
+.normal { background: #444; }
 .section {
-  margin-top:25px;
+  margin-top: 30px;
 }
 .section h2 {
-  color:#d4af37;
-  border-bottom:1px solid #333;
-  padding-bottom:5px;
+  color: #d4af37;
+  border-bottom: 1px solid #333;
+  padding-bottom: 6px;
 }
 ul {
-  list-style:none;
-  padding:0;
+  list-style: none;
+  padding: 0;
 }
 li {
-  padding:6px 0;
-  border-bottom:1px solid #222;
+  padding: 8px 0;
+  border-bottom: 1px solid #222;
 }
 .back {
-  display:block;
-  width:200px;
-  margin:30px auto;
-  text-align:center;
-  padding:12px;
-  background:linear-gradient(to right,#d4af37,#c0c0c0);
-  color:#000;
-  text-decoration:none;
-  border-radius:20px;
-  font-weight:bold;
+  display: block;
+  margin: 35px auto;
+  text-align: center;
+  color: #000;
+  background: linear-gradient(to right, #d4af37, #c0c0c0);
+  padding: 14px;
+  border-radius: 25px;
+  text-decoration: none;
+  width: 220px;
+  font-weight: bold;
 }
 </style>
 </head>
@@ -74,29 +84,27 @@ li {
 <body>
 
 <header>
-  <h1 id="name">...</h1>
+  <h1 id="phoneName">...</h1>
 </header>
 
 <div class="container">
 
   <div class="phone-img">
-    <img id="image">
+    <img id="phoneImage" src="">
   </div>
 
-  <div class="price" id="price"></div>
-
-  <div class="section">
-    <h2>📅 الإصدار</h2>
-    <ul id="release"></ul>
-  </div>
-
-  <div class="section">
-    <h2>🎨 الألوان</h2>
-    <ul id="colors"></ul>
+  <div class="price" id="phonePrice"></div>
+  <div style="text-align:center">
+    <span id="usageBadge" class="badge"></span>
   </div>
 
   <div class="section">
-    <h2>📋 المواصفات</h2>
+    <h2>⚙️ المعالج والأداء</h2>
+    <ul id="processor"></ul>
+  </div>
+
+  <div class="section">
+    <h2>📱 المواصفات الكاملة</h2>
     <ul id="specs"></ul>
   </div>
 
@@ -110,33 +118,39 @@ li {
     <ul id="cons"></ul>
   </div>
 
-  <a class="back" href="index.html">⬅ العودة</a>
-
+  <a href="index.html" class="back">⬅️ العودة للقائمة</a>
 </div>
 
 <script>
-const id = new URLSearchParams(window.location.search).get("id");
+const params = new URLSearchParams(window.location.search);
+const phoneId = params.get('id');
 
-fetch("phones.json")
+fetch('phones.json')
 .then(res => res.json())
 .then(data => {
-  const p = data.phones.find(x => x.id == id);
-  if(!p) return;
+  const phone = data.phones.find(p => p.id == phoneId);
+  if (!phone) return;
 
-  name.textContent = p.name;
-  image.src = p.image;
-  price.textContent = "السعر التقريبي: $" + p.price;
+  document.getElementById('phoneName').innerText = phone.name;
+  document.getElementById('phoneImage').src = phone.image;
+  document.getElementById('phonePrice').innerText = "السعر التقريبي: " + phone.price + "$";
 
-  release.innerHTML = `<li>${p.release}</li>`;
+  const badge = document.getElementById('usageBadge');
+  badge.innerText = phone.processor.usage_type.includes("ألعاب") ? "🎮 هاتف ألعاب" : "📱 استخدام يومي";
+  badge.className += phone.processor.usage_type.includes("ألعاب") ? " game" : " normal";
 
-  p.colors.forEach(c => colors.innerHTML += `<li>🎨 ${c}</li>`);
-
-  for (let k in p.specs) {
-    specs.innerHTML += `<li><strong>${k}:</strong> ${p.specs[k]}</li>`;
+  const proc = document.getElementById('processor');
+  for (let k in phone.processor) {
+    proc.innerHTML += `<li><strong>${k}:</strong> ${phone.processor[k]}</li>`;
   }
 
-  p.pros.forEach(x => pros.innerHTML += `<li>✅ ${x}</li>`);
-  p.cons.forEach(x => cons.innerHTML += `<li>❌ ${x}</li>`);
+  const specs = document.getElementById('specs');
+  for (let key in phone.specs) {
+    specs.innerHTML += `<li><strong>${key}:</strong> ${phone.specs[key]}</li>`;
+  }
+
+  phone.pros?.forEach(p => pros.innerHTML += `<li>✅ ${p}</li>`);
+  phone.cons?.forEach(c => cons.innerHTML += `<li>❌ ${c}</li>`);
 });
 </script>
 
