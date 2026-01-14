@@ -2,122 +2,77 @@
   "phones": [
     {
       "id": 1,
-      "name": "iPhone 16 Pro Max",
-      "price": 1199,
-      "image": "https://fdn2.gsmarena.com/vv/bigpic/apple-iphone-16-pro-max.jpg",
-      "release": "2024",
-      "colors": ["Black Titanium", "Natural Titanium"],
-      "specs": {
-        "المعالج": "Apple A18 Pro",
-        "الشاشة": "6.9 LTPO Super Retina XDR",
-        "الكاميرا": "48 + 12 + 48 MP",
-        "البطارية": "4685 mAh",
-        "النظام": "iOS 18"
-      },
-      "pros": [
-        "أقوى أداء حاليًا",
-        "شاشة فائقة الجودة",
-        "تصوير احترافي"
-      ],
-      "cons": [
-        "سعر مرتفع جدًا",
-        "نظام مغلق"
-      ]
-    },
-    {
-      "id": 2,
       "name": "Samsung Galaxy S24 Ultra",
+      "release": "2024",
       "price": 1099,
       "image": "https://fdn2.gsmarena.com/vv/bigpic/samsung-galaxy-s24-ultra-5g-sm-s928.jpg",
-      "release": "2024",
-      "colors": ["Titanium Black", "Titanium Gray"],
-      "specs": {
-        "المعالج": "Snapdragon 8 Gen 3",
-        "الشاشة": "6.8 Dynamic AMOLED 2X",
-        "الكاميرا": "200 + 50 + 10 MP",
-        "البطارية": "5000 mAh",
-        "النظام": "Android 14"
+
+      "processor": {
+        "name": "Snapdragon 8 Gen 3",
+        "architecture": "8-core",
+        "manufacturing": "4nm",
+        "gpu": "Adreno 750",
+        "usage": "مخصص للألعاب والتطبيقات الثقيلة",
+        "performance_note": "أداء فائق للألعاب، تصوير 8K، ذكاء اصطناعي"
       },
-      "pros": [
-        "أفضل كاميرا أندرويد",
-        "قلم S-Pen",
-        "شاشة قوية"
-      ],
-      "cons": [
-        "حجم ثقيل",
-        "سعر مرتفع"
-      ]
-    },
-    {
-      "id": 3,
-      "name": "Xiaomi 14 Ultra",
-      "price": 950,
-      "image": "https://fdn2.gsmarena.com/vv/bigpic/xiaomi-14-ultra.jpg",
-      "release": "2024",
-      "colors": ["Black", "White"],
-      "specs": {
-        "المعالج": "Snapdragon 8 Gen 3",
-        "الشاشة": "6.73 LTPO AMOLED",
-        "الكاميرا": "50 MP Quad",
-        "البطارية": "5000 mAh",
-        "النظام": "HyperOS"
+
+      "memory": {
+        "ram": "12GB / 16GB",
+        "storage": "256GB / 512GB / 1TB",
+        "type": "UFS 4.0"
       },
-      "pros": [
-        "كاميرا Leica",
-        "أداء ممتاز",
-        "شاشة مذهلة"
-      ],
-      "cons": [
-        "واجهة تحتاج تعود",
-        "سعر مرتفع نسبيًا"
-      ]
-    },
-    {
-      "id": 4,
-      "name": "OnePlus 12",
-      "price": 799,
-      "image": "https://fdn2.gsmarena.com/vv/bigpic/oneplus-12.jpg",
-      "release": "2024",
-      "colors": ["Flowy Emerald", "Silky Black"],
-      "specs": {
-        "المعالج": "Snapdragon 8 Gen 3",
-        "الشاشة": "6.82 LTPO AMOLED",
-        "الكاميرا": "50 + 64 + 48 MP",
-        "البطارية": "5400 mAh",
-        "النظام": "OxygenOS 14"
+
+      "display": {
+        "size": "6.8 إنش",
+        "type": "Dynamic AMOLED 2X",
+        "resolution": "QHD+",
+        "refresh_rate": "120Hz",
+        "protection": "Gorilla Glass Armor"
       },
-      "pros": [
-        "شحن سريع جدًا",
-        "أداء قوي",
-        "سعر منافس"
-      ],
-      "cons": [
-        "الكاميرا ليست الأفضل",
-        "لا يدعم eSIM"
-      ]
-    },
-    {
-      "id": 5,
-      "name": "Samsung Galaxy A55",
-      "price": 380,
-      "image": "https://fdn2.gsmarena.com/vv/bigpic/samsung-galaxy-a55.jpg",
-      "release": "2024",
-      "colors": ["Iceblue", "Navy"],
-      "specs": {
-        "المعالج": "Exynos 1480",
-        "الشاشة": "6.6 Super AMOLED",
-        "الكاميرا": "50 + 12 + 5 MP",
-        "البطارية": "5000 mAh",
-        "النظام": "Android 14"
+
+      "camera": {
+        "rear": "200MP + 50MP + 10MP + 12MP",
+        "front": "12MP",
+        "video": "8K@30fps / 4K@120fps",
+        "features": "OIS, Laser AF, HDR10+"
       },
-      "pros": [
-        "سعر مناسب",
-        "شاشة ممتازة",
-        "تصميم أنيق"
+
+      "battery": {
+        "capacity": "5000 mAh",
+        "charging": "45W سلكي – 15W لاسلكي"
+      },
+
+      "sound": {
+        "type": "ستيريو",
+        "enhancement": "Dolby Atmos"
+      },
+
+      "networks": "5G / Wi-Fi 6E / Bluetooth 5.3",
+
+      "dimensions": "162.3 × 79 × 8.6 مم",
+      "weight": "233 جرام",
+
+      "resistance": "IP68 مقاوم للماء والغبار",
+
+      "os": "Android 14 – One UI",
+
+      "colors": [
+        "Titanium Black",
+        "Titanium Gray",
+        "Titanium Violet"
       ],
+
+      "pros": [
+        "أداء قوي جدًا للألعاب",
+        "كاميرا احترافية",
+        "شاشة مذهلة",
+        "دعم طويل للتحديثات"
+      ],
+
       "cons": [
-        "أداء متوسط",
-        "شحن بطيء"
+        "سعر مرتفع",
+        "حجم ووزن كبير",
+        "سرعة الشحن أقل من المنافسين"
       ]
     }
   ]
