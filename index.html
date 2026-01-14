@@ -3,95 +3,107 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Ugarit Future</title>
+<title>Ugarit Future | دليل الهواتف الذكية</title>
 
 <style>
-:root{
-  --gold:#d4af37;
-  --silver:#cfd2d6;
-  --dark:#07070d;
-  --card:#11111b;
+:root {
+  --gold: #d4af37;
+  --silver: #c0c0c0;
+  --dark: #05050a;
+  --card: rgba(20,20,35,.95);
 }
 
-*{box-sizing:border-box;font-family:Tahoma,Arial}
-
-body{
-  margin:0;
-  background:var(--dark);
-  color:#fff;
+* {
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, sans-serif;
 }
 
-header{
-  padding:20px;
-  text-align:center;
-  border-bottom:2px solid var(--gold);
-  background:linear-gradient(135deg,#0b0b14,#05050a);
+body {
+  margin: 0;
+  background: var(--dark);
+  color: #f0f0f0;
 }
 
-header h1{
-  margin:0;
-  font-size:28px;
-  background:linear-gradient(90deg,var(--gold),var(--silver),var(--gold));
-  -webkit-background-clip:text;
-  -webkit-text-fill-color:transparent;
+header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: linear-gradient(90deg, rgba(212,175,55,.15), rgba(192,192,192,.1));
+  border-bottom: 2px solid var(--gold);
+  padding: 18px;
+  text-align: center;
+  backdrop-filter: blur(8px);
 }
 
-header p{
-  color:#aaa;
-  margin-top:6px;
+header h1 {
+  margin: 0;
+  font-size: 1.8em;
+  background: linear-gradient(to right, var(--gold), var(--silver), var(--gold));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
-.search{
-  padding:15px;
+header p {
+  margin: 6px 0 0;
+  font-size: .95em;
+  opacity: .85;
 }
 
-.search input{
-  width:100%;
-  padding:14px;
-  font-size:16px;
-  border-radius:12px;
-  border:1px solid var(--gold);
-  background:#000;
-  color:#fff;
+.search-box {
+  padding: 15px;
+  max-width: 600px;
+  margin: auto;
 }
 
-#phones{
-  display:grid;
-  grid-template-columns:repeat(auto-fill,minmax(160px,1fr));
-  gap:15px;
-  padding:15px;
+.search-box input {
+  width: 100%;
+  padding: 14px;
+  border-radius: 15px;
+  border: 2px solid var(--gold);
+  background: #111;
+  color: #fff;
+  font-size: 16px;
 }
 
-.card{
-  background:var(--card);
-  border-radius:18px;
-  padding:10px;
-  border:1px solid rgba(212,175,55,.2);
-  transition:.2s;
+#phones {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  gap: 15px;
+  padding: 20px;
 }
 
-.card:hover{
-  transform:translateY(-4px);
-  border-color:var(--gold);
+.phone {
+  background: var(--card);
+  border-radius: 20px;
+  padding: 12px;
+  text-align: center;
+  cursor: pointer;
+  transition: .3s;
+  border: 1px solid rgba(212,175,55,.2);
 }
 
-.card img{
-  width:100%;
-  height:180px;
-  object-fit:contain;
-  background:#fff;
-  border-radius:14px;
+.phone:hover {
+  transform: translateY(-5px);
+  border-color: var(--gold);
 }
 
-.card h3{
-  font-size:14px;
-  margin:8px 0 4px;
-  color:var(--gold);
+.phone img {
+  max-width: 100%;
+  max-height: 130px;
+  background: #fff;
+  border-radius: 15px;
+  padding: 8px;
 }
 
-.price{
-  font-weight:bold;
-  color:#fff;
+.phone h3 {
+  font-size: .95em;
+  color: var(--gold);
+  margin: 10px 0 5px;
+}
+
+.phone span {
+  color: var(--silver);
+  font-weight: bold;
 }
 </style>
 </head>
@@ -100,44 +112,45 @@ header p{
 
 <header>
   <h1>Ugarit Future</h1>
-  <p>دليل الهواتف الذكية</p>
+  <p>دليل الهواتف الذكية — مواصفات • صور • مقارنة</p>
 </header>
 
-<div class="search">
-  <input id="search" placeholder="ابحث عن هاتف...">
+<div class="search-box">
+  <input type="text" id="search" placeholder="ابحث عن هاتف...">
 </div>
 
 <div id="phones"></div>
 
 <script>
-const phones=[
-  {name:"Samsung Galaxy S23",price:800,img:"https://fdn2.gsmarena.com/vv/bigpic/samsung-galaxy-s23.jpg"},
-  {name:"Samsung Galaxy A54",price:400,img:"https://fdn2.gsmarena.com/vv/bigpic/samsung-galaxy-a54.jpg"},
-  {name:"iPhone 14",price:900,img:"https://fdn2.gsmarena.com/vv/bigpic/apple-iphone-14.jpg"},
-  {name:"Xiaomi Redmi Note 12",price:200,img:"https://fdn2.gsmarena.com/vv/bigpic/xiaomi-redmi-note-12.jpg"},
-  {name:"Infinix Hot 10T",price:150,img:"https://fdn2.gsmarena.com/vv/bigpic/infinix-hot-10t.jpg"}
-];
+fetch('phones.json')
+.then(res => res.json())
+.then(data => {
+  window.allPhones = data.phones;
+  render(data.phones);
+});
 
-const box=document.getElementById("phones");
-const search=document.getElementById("search");
-
-function render(){
-  const q=search.value.toLowerCase();
-  box.innerHTML="";
-  phones.filter(p=>p.name.toLowerCase().includes(q))
-  .forEach(p=>{
-    box.innerHTML+=`
-      <div class="card">
-        <img src="${p.img}">
+function render(list) {
+  const box = document.getElementById('phones');
+  box.innerHTML = '';
+  list.forEach(p => {
+    box.innerHTML += `
+      <div class="phone" onclick="openPhone(${p.id})">
+        <img src="${p.image}" loading="lazy">
         <h3>${p.name}</h3>
-        <div class="price">$${p.price}</div>
+        <span>$${p.price}</span>
       </div>
     `;
   });
 }
 
-search.oninput=render;
-render();
+document.getElementById('search').addEventListener('input', e => {
+  const v = e.target.value.toLowerCase();
+  render(allPhones.filter(p => p.name.toLowerCase().includes(v)));
+});
+
+function openPhone(id) {
+  location.href = 'phone.html?id=' + id;
+}
 </script>
 
 </body>
