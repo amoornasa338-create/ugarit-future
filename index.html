@@ -3,107 +3,67 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Ugarit Future | دليل الهواتف الذكية</title>
+<title>Ugarit Future | دليل الهواتف</title>
 
 <style>
 :root {
-  --gold: #d4af37;
-  --silver: #c0c0c0;
-  --dark: #05050a;
-  --card: rgba(20,20,35,.95);
+  --gold:#d4af37;
+  --silver:#c0c0c0;
+  --dark:#05050a;
+  --card:#111;
 }
-
-* {
-  box-sizing: border-box;
-  font-family: 'Segoe UI', Tahoma, sans-serif;
-}
-
 body {
-  margin: 0;
-  background: var(--dark);
-  color: #f0f0f0;
+  margin:0;
+  background:var(--dark);
+  font-family:Arial, sans-serif;
+  color:#f0f0f0;
 }
-
 header {
-  position: sticky;
-  top: 0;
-  z-index: 100;
-  background: linear-gradient(90deg, rgba(212,175,55,.15), rgba(192,192,192,.1));
-  border-bottom: 2px solid var(--gold);
-  padding: 18px;
-  text-align: center;
-  backdrop-filter: blur(8px);
+  text-align:center;
+  padding:20px;
+  border-bottom:2px solid var(--gold);
 }
-
 header h1 {
-  margin: 0;
-  font-size: 1.8em;
-  background: linear-gradient(to right, var(--gold), var(--silver), var(--gold));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  margin:0;
+  background:linear-gradient(to right,var(--gold),var(--silver));
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
 }
-
-header p {
-  margin: 6px 0 0;
-  font-size: .95em;
-  opacity: .85;
-}
-
-.search-box {
-  padding: 15px;
-  max-width: 600px;
-  margin: auto;
-}
-
-.search-box input {
-  width: 100%;
-  padding: 14px;
-  border-radius: 15px;
-  border: 2px solid var(--gold);
-  background: #111;
-  color: #fff;
-  font-size: 16px;
-}
-
 #phones {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
-  gap: 15px;
-  padding: 20px;
+  padding:20px;
+  display:grid;
+  grid-template-columns:repeat(auto-fill,minmax(160px,1fr));
+  gap:15px;
 }
-
-.phone {
-  background: var(--card);
-  border-radius: 20px;
-  padding: 12px;
-  text-align: center;
-  cursor: pointer;
-  transition: .3s;
-  border: 1px solid rgba(212,175,55,.2);
+.phone-card {
+  background:var(--card);
+  border:1px solid rgba(212,175,55,.3);
+  border-radius:18px;
+  padding:10px;
+  text-align:center;
+  cursor:pointer;
+  transition:.3s;
 }
-
-.phone:hover {
-  transform: translateY(-5px);
-  border-color: var(--gold);
+.phone-card:hover {
+  transform:translateY(-5px);
+  border-color:var(--gold);
 }
-
-.phone img {
-  max-width: 100%;
-  max-height: 130px;
-  background: #fff;
-  border-radius: 15px;
-  padding: 8px;
+.phone-card img {
+  max-width:100%;
+  height:130px;
+  object-fit:contain;
+  background:#fff;
+  border-radius:12px;
 }
-
-.phone h3 {
-  font-size: .95em;
-  color: var(--gold);
-  margin: 10px 0 5px;
+.phone-name {
+  margin-top:10px;
+  color:var(--gold);
+  font-weight:bold;
+  font-size:14px;
 }
-
-.phone span {
-  color: var(--silver);
-  font-weight: bold;
+.phone-price {
+  color:var(--silver);
+  margin-top:5px;
 }
 </style>
 </head>
@@ -112,44 +72,27 @@ header p {
 
 <header>
   <h1>Ugarit Future</h1>
-  <p>دليل الهواتف الذكية — مواصفات • صور • مقارنة</p>
+  <p>دليل الهواتف الذكية</p>
 </header>
-
-<div class="search-box">
-  <input type="text" id="search" placeholder="ابحث عن هاتف...">
-</div>
 
 <div id="phones"></div>
 
 <script>
-fetch('phones.json')
+fetch("phones.json")
 .then(res => res.json())
 .then(data => {
-  window.allPhones = data.phones;
-  render(data.phones);
-});
-
-function render(list) {
-  const box = document.getElementById('phones');
-  box.innerHTML = '';
-  list.forEach(p => {
-    box.innerHTML += `
-      <div class="phone" onclick="openPhone(${p.id})">
-        <img src="${p.image}" loading="lazy">
-        <h3>${p.name}</h3>
-        <span>$${p.price}</span>
-      </div>
-    `;
-  });
-}
-
-document.getElementById('search').addEventListener('input', e => {
-  const v = e.target.value.toLowerCase();
-  render(allPhones.filter(p => p.name.toLowerCase().includes(v)));
+  const container = document.getElementById("phones");
+  container.innerHTML = data.phones.map(p => `
+    <div class="phone-card" onclick="openPhone(${p.id})">
+      <img src="${p.image}" alt="${p.name}">
+      <div class="phone-name">${p.name}</div>
+      <div class="phone-price">$${p.price}</div>
+    </div>
+  `).join("");
 });
 
 function openPhone(id) {
-  location.href = 'phone.html?id=' + id;
+  window.location.href = "phone.html?id=" + id;
 }
 </script>
 
