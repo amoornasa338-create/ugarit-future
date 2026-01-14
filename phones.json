@@ -1,184 +1,57 @@
 {
   "phones": [
     {
-      "name": "Samsung Galaxy S23",
-      "price": 800,
-      "image": "https://fdn2.gsmarena.com/vv/bigpic/samsung-galaxy-s23.jpg",
+      "name": "iPhone 15 Pro Max",
+      "price": 1199,
+      "image": "https://i.imgur.com/9QO6K7g.png",
       "specs": {
-        "processor": "Snapdragon 8 Gen 2",
-        "screen": "6.1 AMOLED 120Hz",
-        "camera": "50 MP",
-        "camera_details": "Wide f/1.8 OIS",
-        "video": "8K@30fps",
-        "battery": "3900 mAh",
-        "charging": "25W",
-        "audio": "Stereo speakers",
+        "processor": "Apple A17 Pro",
+        "screen": "6.7 OLED 120Hz",
+        "camera": "48 MP",
+        "camera_details": "OIS + Telephoto",
+        "video": "4K@60fps",
+        "battery": "4422 mAh",
+        "charging": "27W",
+        "audio": "Stereo",
         "jack": "No",
-        "os": "Android",
-        "colors": ["Black", "Green", "Cream"]
+        "os": "iOS",
+        "colors": ["Black", "Blue", "White"]
       }
     },
     {
-      "name": "Samsung Galaxy S22",
-      "price": 650,
-      "image": "https://fdn2.gsmarena.com/vv/bigpic/samsung-galaxy-s22.jpg",
+      "name": "Samsung Galaxy S24 Ultra",
+      "price": 1099,
+      "image": "https://i.imgur.com/J6cT4rY.png",
       "specs": {
-        "processor": "Snapdragon 8 Gen 1",
-        "screen": "6.1 AMOLED 120Hz",
-        "camera": "50 MP",
-        "camera_details": "OIS",
+        "processor": "Snapdragon 8 Gen 3",
+        "screen": "6.8 AMOLED 120Hz",
+        "camera": "200 MP",
+        "camera_details": "OIS + Periscope",
         "video": "8K",
-        "battery": "3700 mAh",
-        "charging": "25W",
+        "battery": "5000 mAh",
+        "charging": "45W",
         "audio": "Stereo",
         "jack": "No",
         "os": "Android",
-        "colors": ["Black", "White", "Green"]
+        "colors": ["Black", "Gray", "Violet"]
       }
     },
     {
-      "name": "Samsung Galaxy A54",
-      "price": 400,
-      "image": "https://fdn2.gsmarena.com/vv/bigpic/samsung-galaxy-a54.jpg",
+      "name": "Google Pixel 8 Pro",
+      "price": 999,
+      "image": "https://i.imgur.com/yV5Ww0H.png",
       "specs": {
-        "processor": "Exynos 1380",
-        "screen": "6.4 AMOLED 120Hz",
+        "processor": "Tensor G3",
+        "screen": "6.7 OLED 120Hz",
         "camera": "50 MP",
-        "camera_details": "OIS",
+        "camera_details": "AI Camera",
         "video": "4K",
-        "battery": "5000 mAh",
-        "charging": "25W",
+        "battery": "5050 mAh",
+        "charging": "30W",
         "audio": "Stereo",
         "jack": "No",
         "os": "Android",
-        "colors": ["Black", "White", "Purple"]
-      }
-    },
-    {
-      "name": "Samsung Galaxy A34",
-      "price": 320,
-      "image": "https://fdn2.gsmarena.com/vv/bigpic/samsung-galaxy-a34.jpg",
-      "specs": {
-        "processor": "Dimensity 1080",
-        "screen": "6.6 AMOLED 120Hz",
-        "camera": "48 MP",
-        "camera_details": "OIS",
-        "video": "4K",
-        "battery": "5000 mAh",
-        "charging": "25W",
-        "audio": "Stereo",
-        "jack": "No",
-        "os": "Android",
-        "colors": ["Silver", "Lime"]
-      }
-    },
-    {
-      "name": "iPhone 14",
-      "price": 900,
-      "image": "https://fdn2.gsmarena.com/vv/bigpic/apple-iphone-14.jpg",
-      "specs": {
-        "processor": "Apple A15",
-        "screen": "6.1 OLED",
-        "camera": "12 MP",
-        "camera_details": "Dual OIS",
-        "video": "4K@60fps",
-        "battery": "3279 mAh",
-        "charging": "20W",
-        "audio": "Stereo",
-        "jack": "No",
-        "os": "iOS",
-        "colors": ["Black", "Blue", "Red"]
-      }
-    },
-    {
-      "name": "iPhone 13",
-      "price": 700,
-      "image": "https://fdn2.gsmarena.com/vv/bigpic/apple-iphone-13.jpg",
-      "specs": {
-        "processor": "Apple A15",
-        "screen": "6.1 OLED",
-        "camera": "12 MP",
-        "camera_details": "Dual OIS",
-        "video": "4K@60fps",
-        "battery": "3240 mAh",
-        "charging": "20W",
-        "audio": "Stereo",
-        "jack": "No",
-        "os": "iOS",
-        "colors": ["Black", "Blue", "Pink"]
-      }
-    },
-    {
-      "name": "iPhone 12",
-      "price": 600,
-      "image": "https://fdn2.gsmarena.com/vv/bigpic/apple-iphone-12.jpg",
-      "specs": {
-        "processor": "Apple A14",
-        "screen": "6.1 OLED",
-        "camera": "12 MP",
-        "camera_details": "Dual Camera",
-        "video": "4K",
-        "battery": "2815 mAh",
-        "charging": "20W",
-        "audio": "Stereo",
-        "jack": "No",
-        "os": "iOS",
-        "colors": ["Black", "White", "Green"]
-      }
-    },
-    {
-      "name": "Xiaomi Redmi Note 12",
-      "price": 200,
-      "image": "https://fdn2.gsmarena.com/vv/bigpic/xiaomi-redmi-note-12.jpg",
-      "specs": {
-        "processor": "Snapdragon 685",
-        "screen": "6.67 AMOLED",
-        "camera": "50 MP",
-        "camera_details": "Wide f/1.8",
-        "video": "1080p",
-        "battery": "5000 mAh",
-        "charging": "33W",
-        "audio": "Mono",
-        "jack": "Yes",
-        "os": "Android",
-        "colors": ["Black", "Blue", "Green"]
-      }
-    },
-    {
-      "name": "Xiaomi Redmi Note 11",
-      "price": 180,
-      "image": "https://fdn2.gsmarena.com/vv/bigpic/xiaomi-redmi-note-11.jpg",
-      "specs": {
-        "processor": "Snapdragon 680",
-        "screen": "6.43 AMOLED",
-        "camera": "50 MP",
-        "camera_details": "Quad Camera",
-        "video": "1080p",
-        "battery": "5000 mAh",
-        "charging": "33W",
-        "audio": "Stereo",
-        "jack": "Yes",
-        "os": "Android",
-        "colors": ["Graphite", "Blue"]
-      }
-    },
-
-    {
-      "name": "Infinix Hot 10T",
-      "price": 150,
-      "image": "https://fdn2.gsmarena.com/vv/bigpic/infinix-hot-10t.jpg",
-      "specs": {
-        "processor": "Helio G70",
-        "screen": "6.82 LCD",
-        "camera": "48 MP",
-        "camera_details": "Triple Camera",
-        "video": "1080p",
-        "battery": "5000 mAh",
-        "charging": "18W",
-        "audio": "Mono",
-        "jack": "Yes",
-        "os": "Android",
-        "colors": ["Purple", "Black"]
+        "colors": ["Black", "Blue"]
       }
     }
   ]
