@@ -1,79 +1,34 @@
 {
-  "phones": [
-    {
-      "id": 1,
-      "name": "Samsung Galaxy S24 Ultra",
-      "release": "2024",
-      "price": 1099,
-      "image": "https://fdn2.gsmarena.com/vv/bigpic/samsung-galaxy-s24-ultra-5g-sm-s928.jpg",
-
-      "processor": {
-        "name": "Snapdragon 8 Gen 3",
-        "architecture": "8-core",
-        "manufacturing": "4nm",
-        "gpu": "Adreno 750",
-        "usage": "مخصص للألعاب والتطبيقات الثقيلة",
-        "performance_note": "أداء فائق للألعاب، تصوير 8K، ذكاء اصطناعي"
-      },
-
-      "memory": {
-        "ram": "12GB / 16GB",
-        "storage": "256GB / 512GB / 1TB",
-        "type": "UFS 4.0"
-      },
-
-      "display": {
-        "size": "6.8 إنش",
-        "type": "Dynamic AMOLED 2X",
-        "resolution": "QHD+",
-        "refresh_rate": "120Hz",
-        "protection": "Gorilla Glass Armor"
-      },
-
-      "camera": {
-        "rear": "200MP + 50MP + 10MP + 12MP",
-        "front": "12MP",
-        "video": "8K@30fps / 4K@120fps",
-        "features": "OIS, Laser AF, HDR10+"
-      },
-
-      "battery": {
-        "capacity": "5000 mAh",
-        "charging": "45W سلكي – 15W لاسلكي"
-      },
-
-      "sound": {
-        "type": "ستيريو",
-        "enhancement": "Dolby Atmos"
-      },
-
-      "networks": "5G / Wi-Fi 6E / Bluetooth 5.3",
-
-      "dimensions": "162.3 × 79 × 8.6 مم",
-      "weight": "233 جرام",
-
-      "resistance": "IP68 مقاوم للماء والغبار",
-
-      "os": "Android 14 – One UI",
-
-      "colors": [
-        "Titanium Black",
-        "Titanium Gray",
-        "Titanium Violet"
-      ],
-
-      "pros": [
-        "أداء قوي جدًا للألعاب",
-        "كاميرا احترافية",
-        "شاشة مذهلة",
-        "دعم طويل للتحديثات"
-      ],
-
-      "cons": [
-        "سعر مرتفع",
-        "حجم ووزن كبير",
-        "سرعة الشحن أقل من المنافسين"
-      ]
-    }
-  ]
+  "id": 1,
+  "name": "iPhone 16 Pro Max",
+  "price": 1199,
+  "image": "IMAGE_URL",
+  "release": "2024",
+  "specs": {
+    "الشاشة": "6.9 LTPO Super Retina XDR 120Hz",
+    "المعالج": "Apple A18 Pro",
+    "دقة التصنيع": "3nm",
+    "المعالج للألعاب": "جيد جدًا (ليس مخصصًا للألعاب الثقيلة)",
+    "التبريد": "تبريد سلبي محسّن",
+    "الذاكرة": "8GB RAM",
+    "التخزين": "256 / 512 / 1TB",
+    "الكاميرا": "48MP + 12MP + 48MP",
+    "البطارية": "4685 mAh",
+    "النظام": "iOS 18"
+  },
+  "colors": ["Black Titanium", "Natural Titanium"],
+  "pros": [
+    "أداء قوي جدًا في التطبيقات",
+    "شاشة فائقة الجودة",
+    "دعم طويل للتحديثات"
+  ],
+  "cons": [
+    "سعر مرتفع",
+    "غير مخصص لمحترفي الألعاب"
+  ],
+  "usage": {
+    "gaming": "جيد",
+    "daily": "ممتاز",
+    "camera": "ممتاز"
+  }
 }
