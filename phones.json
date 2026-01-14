@@ -8,22 +8,16 @@
       "category": "رائد",
       "image": "https://fdn2.gsmarena.com/vv/bigpic/apple-iphone-13.jpg",
       "specs": {
-        "processor": "Apple A15 Bionic",
+        "processor": "A15 Bionic",
         "screen": "6.1 OLED",
         "camera": "12MP Dual",
-        "camera_details": "Wide f/1.6, OIS",
         "video": "4K@60fps",
         "battery": "3240 mAh",
         "charging": "20W",
-        "audio": "Stereo speakers",
-        "jack": "No 3.5mm jack",
         "os": "iOS",
-        "colors": ["Black", "White", "Blue", "Red"]
-      },
-      "pros": ["أداء قوي", "كاميرا ممتازة", "دعم طويل"],
-      "cons": ["سعر مرتفع", "شحن بطيء"]
+        "colors": ["Black", "White", "Red", "Blue"]
+      }
     },
-
     {
       "id": 2,
       "brand": "Samsung",
@@ -35,19 +29,13 @@
         "processor": "Snapdragon 8 Gen 2",
         "screen": "6.1 AMOLED 120Hz",
         "camera": "50MP",
-        "camera_details": "Wide f/1.8, OIS",
-        "video": "8K@30fps",
+        "video": "8K",
         "battery": "3900 mAh",
         "charging": "25W",
-        "audio": "Stereo speakers",
-        "jack": "No 3.5mm jack",
         "os": "Android",
-        "colors": ["Black", "Cream", "Green", "Lavender"]
-      },
-      "pros": ["شاشة ممتازة", "أداء قوي"],
-      "cons": ["سعر مرتفع"]
+        "colors": ["Black", "Green", "Lavender"]
+      }
     },
-
     {
       "id": 3,
       "brand": "Xiaomi",
@@ -59,17 +47,48 @@
         "processor": "Snapdragon 685",
         "screen": "6.67 AMOLED",
         "camera": "50MP",
-        "camera_details": "Wide f/1.8",
         "video": "1080p",
         "battery": "5000 mAh",
         "charging": "33W",
-        "audio": "Mono speaker",
-        "jack": "3.5mm jack",
         "os": "Android",
         "colors": ["Black", "Blue", "Green"]
-      },
-      "pros": ["سعر ممتاز", "شاشة AMOLED"],
-      "cons": ["أداء محدود"]
+      }
+    },
+    {
+      "id": 4,
+      "brand": "Infinix",
+      "name": "Hot 10T",
+      "price": 150,
+      "category": "اقتصادي",
+      "image": "https://fdn2.gsmarena.com/vv/bigpic/infinix-hot-10t.jpg",
+      "specs": {
+        "processor": "Helio G70",
+        "screen": "6.82 IPS",
+        "camera": "48MP",
+        "video": "1080p",
+        "battery": "5000 mAh",
+        "charging": "18W",
+        "os": "Android",
+        "colors": ["Black", "Purple", "Blue"]
+      }
+    },
+    {
+      "id": 5,
+      "brand": "Huawei",
+      "name": "Nova 9",
+      "price": 430,
+      "category": "متوسط",
+      "image": "https://fdn2.gsmarena.com/vv/bigpic/huawei-nova-9.jpg",
+      "specs": {
+        "processor": "Snapdragon 778G",
+        "screen": "6.57 OLED 120Hz",
+        "camera": "50MP",
+        "video": "4K",
+        "battery": "4300 mAh",
+        "charging": "66W",
+        "os": "HarmonyOS",
+        "colors": ["Black", "Green", "Blue"]
+      }
     }
   ]
 }
