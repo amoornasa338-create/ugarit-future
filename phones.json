@@ -1,202 +1,263 @@
 {
   "phones": [
     {
-      "name": "iPhone 15 Pro Max",
+      "name": "iPhone 16 Pro Max",
       "price": 1199,
-      "image": "https://i.imgur.com/9QO6K7g.png",
+      "image": "https://fdn2.gsmarena.com/vv/bigpic/apple-iphone-16-pro-max.jpg",
       "specs": {
-        "processor": "Apple A17 Pro",
-        "screen": "6.7 OLED 120Hz",
-        "camera": "48 MP",
-        "camera_details": "OIS + Telephoto",
-        "video": "4K@60fps",
-        "battery": "4422 mAh",
-        "charging": "27W",
-        "audio": "Stereo",
-        "jack": "No",
-        "os": "iOS",
-        "colors": ["Black", "Blue", "White"]
+        "processor": "Apple A18 Pro",
+        "screen": "6.9 LTPO Super Retina XDR",
+        "camera": "48 MP + 12 MP + 48 MP",
+        "battery": "4685 mAh",
+        "os": "iOS 18",
+        "colors": ["Black Titanium", "Natural Titanium"]
       }
     },
     {
       "name": "Samsung Galaxy S24 Ultra",
       "price": 1099,
-      "image": "https://i.imgur.com/J6cT4rY.png",
+      "image": "https://fdn2.gsmarena.com/vv/bigpic/samsung-galaxy-s24-ultra-5g-sm-s928.jpg",
       "specs": {
         "processor": "Snapdragon 8 Gen 3",
-        "screen": "6.8 AMOLED 120Hz",
-        "camera": "200 MP",
-        "camera_details": "OIS + Periscope",
-        "video": "8K",
+        "screen": "6.8 Dynamic AMOLED 2X",
+        "camera": "200 MP + 50 MP + 10 MP",
         "battery": "5000 mAh",
-        "charging": "45W",
-        "audio": "Stereo",
-        "jack": "No",
-        "os": "Android",
-        "colors": ["Black", "Gray", "Violet"]
+        "os": "Android 14",
+        "colors": ["Titanium Black", "Titanium Gray"]
       }
     },
     {
-      "name": "Google Pixel 8 Pro",
-      "price": 999,
-      "image": "https://i.imgur.com/yV5Ww0H.png",
+      "name": "Xiaomi 14 Ultra",
+      "price": 950,
+      "image": "https://fdn2.gsmarena.com/vv/bigpic/xiaomi-14-ultra.jpg",
       "specs": {
-        "processor": "Tensor G3",
-        "screen": "6.7 OLED 120Hz",
-        "camera": "50 MP",
-        "camera_details": "AI Camera",
-        "video": "4K",
-        "battery": "5050 mAh",
-        "charging": "30W",
-        "audio": "Stereo",
-        "jack": "No",
-        "os": "Android",
-        "colors": ["Black", "Blue"]
+        "processor": "Snapdragon 8 Gen 3",
+        "screen": "6.73 LTPO AMOLED",
+        "camera": "50 MP Quad Camera",
+        "battery": "5000 mAh",
+        "os": "HyperOS",
+        "colors": ["Black", "White"]
+      }
+    },
+    {
+      "name": "Google Pixel 9 Pro XL",
+      "price": 1099,
+      "image": "https://fdn2.gsmarena.com/vv/bigpic/google-pixel-9-pro-xl.jpg",
+      "specs": {
+        "processor": "Google Tensor G4",
+        "screen": "6.8 LTPO OLED",
+        "camera": "50 MP + 48 MP + 48 MP",
+        "battery": "5060 mAh",
+        "os": "Android 15",
+        "colors": ["Obsidian", "Porcelain"]
       }
     },
     {
       "name": "OnePlus 12",
-      "price": 899,
-      "image": "https://i.imgur.com/7mYzK4Z.png",
+      "price": 799,
+      "image": "https://fdn2.gsmarena.com/vv/bigpic/oneplus-12.jpg",
       "specs": {
         "processor": "Snapdragon 8 Gen 3",
-        "screen": "6.82 AMOLED 120Hz",
-        "camera": "50 MP",
-        "camera_details": "Hasselblad",
-        "video": "4K",
+        "screen": "6.82 LTPO AMOLED",
+        "camera": "50 MP + 64 MP + 48 MP",
         "battery": "5400 mAh",
-        "charging": "100W",
-        "audio": "Stereo",
-        "jack": "No",
-        "os": "Android",
+        "os": "OxygenOS 14",
+        "colors": ["Flowy Emerald", "Silky Black"]
+      }
+    },
+    {
+      "name": "Samsung Galaxy A55",
+      "price": 380,
+      "image": "https://fdn2.gsmarena.com/vv/bigpic/samsung-galaxy-a55.jpg",
+      "specs": {
+        "processor": "Exynos 1480",
+        "screen": "6.6 Super AMOLED",
+        "camera": "50 MP + 12 MP + 5 MP",
+        "battery": "5000 mAh",
+        "os": "Android 14",
+        "colors": ["Iceblue", "Navy"]
+      }
+    },
+    {
+      "name": "Redmi Note 13 Pro+",
+      "price": 350,
+      "image": "https://fdn2.gsmarena.com/vv/bigpic/xiaomi-redmi-note-13-pro-plus.jpg",
+      "specs": {
+        "processor": "Dimensity 7200 Ultra",
+        "screen": "6.67 AMOLED",
+        "camera": "200 MP + 8 MP + 2 MP",
+        "battery": "5000 mAh",
+        "os": "MIUI 14",
+        "colors": ["Midnight Black", "Aurora Purple"]
+      }
+    },
+    {
+      "name": "Infinix Note 40 Pro",
+      "price": 260,
+      "image": "https://fdn2.gsmarena.com/vv/bigpic/infinix-note-40-pro.jpg",
+      "specs": {
+        "processor": "Helio G99 Ultimate",
+        "screen": "6.78 AMOLED",
+        "camera": "108 MP Triple",
+        "battery": "5000 mAh",
+        "os": "XOS 14",
+        "colors": ["Vintage Green", "Titan Gold"]
+      }
+    },
+    {
+      "name": "Huawei Pura 70 Ultra",
+      "price": 1100,
+      "image": "https://fdn2.gsmarena.com/vv/bigpic/huawei-pura-70-ultra.jpg",
+      "specs": {
+        "processor": "Kirin 9010",
+        "screen": "6.8 LTPO OLED",
+        "camera": "50 MP Retractable",
+        "battery": "5200 mAh",
+        "os": "EMUI 14.2",
+        "colors": ["Black", "Green", "Brown"]
+      }
+    },
+    {
+      "name": "Oppo Reno 12 Pro",
+      "price": 450,
+      "image": "https://fdn2.gsmarena.com/vv/bigpic/oppo-reno12-pro-international.jpg",
+      "specs": {
+        "processor": "Dimensity 7300 Energy",
+        "screen": "6.7 AMOLED",
+        "camera": "50 MP + 50 MP + 8 MP",
+        "battery": "5000 mAh",
+        "os": "ColorOS 14.1",
+        "colors": ["Space Brown", "Sunset Gold"]
+      }
+    },
+    {
+      "name": "Realme GT 6",
+      "price": 550,
+      "image": "https://fdn2.gsmarena.com/vv/bigpic/realme-gt6.jpg",
+      "specs": {
+        "processor": "Snapdragon 8s Gen 3",
+        "screen": "6.78 LTPO AMOLED",
+        "camera": "50 MP + 50 MP + 8 MP",
+        "battery": "5500 mAh",
+        "os": "Android 14",
+        "colors": ["Fluid Silver", "Razor Green"]
+      }
+    },
+    {
+      "name": "Honor Magic6 Pro",
+      "price": 899,
+      "image": "https://fdn2.gsmarena.com/vv/bigpic/honor-magic6-pro.jpg",
+      "specs": {
+        "processor": "Snapdragon 8 Gen 3",
+        "screen": "6.8 LTPO OLED",
+        "camera": "50 MP + 180 MP + 50 MP",
+        "battery": "5600 mAh",
+        "os": "MagicOS 8",
         "colors": ["Black", "Green"]
       }
     },
     {
-      "name": "Xiaomi 13 Pro",
-      "price": 850,
-      "image": "https://i.imgur.com/9X9w2lK.png",
+      "name": "Nothing Phone (2a)",
+      "price": 320,
+      "image": "https://fdn2.gsmarena.com/vv/bigpic/nothing-phone-2a.jpg",
+      "specs": {
+        "processor": "Dimensity 7200 Pro",
+        "screen": "6.7 AMOLED",
+        "camera": "50 MP + 50 MP",
+        "battery": "5000 mAh",
+        "os": "Nothing OS 2.5",
+        "colors": ["Black", "White", "Milk"]
+      }
+    },
+    {
+      "name": "Sony Xperia 1 VI",
+      "price": 1200,
+      "image": "https://fdn2.gsmarena.com/vv/bigpic/sony-xperia-1-vi.jpg",
+      "specs": {
+        "processor": "Snapdragon 8 Gen 3",
+        "screen": "6.5 LTPO OLED",
+        "camera": "48 MP + 12 MP + 12 MP",
+        "battery": "5000 mAh",
+        "os": "Android 14",
+        "colors": ["Black", "Platinum Silver"]
+      }
+    },
+    {
+      "name": "Poco F6 Pro",
+      "price": 499,
+      "image": "https://fdn2.gsmarena.com/vv/bigpic/xiaomi-poco-f6-pro.jpg",
       "specs": {
         "processor": "Snapdragon 8 Gen 2",
-        "screen": "6.73 AMOLED",
-        "camera": "50 MP",
-        "camera_details": "Leica Lens",
-        "video": "8K",
-        "battery": "4820 mAh",
-        "charging": "120W",
-        "audio": "Stereo",
-        "jack": "No",
-        "os": "Android",
+        "screen": "6.67 AMOLED 120Hz",
+        "camera": "50 MP + 8 MP + 2 MP",
+        "battery": "5000 mAh",
+        "os": "HyperOS",
         "colors": ["Black", "White"]
       }
     },
-
     {
-      "name": "Samsung Galaxy S23",
-      "price": 800,
-      "image": "https://i.imgur.com/WZz6Y7p.png",
-      "specs": {
-        "processor": "Snapdragon 8 Gen 2",
-        "screen": "6.1 AMOLED 120Hz",
-        "camera": "50 MP",
-        "camera_details": "OIS",
-        "video": "8K",
-        "battery": "3900 mAh",
-        "charging": "25W",
-        "audio": "Stereo",
-        "jack": "No",
-        "os": "Android",
-        "colors": ["Black", "Green"]
-      }
-    },
-    {
-      "name": "iPhone 14",
-      "price": 900,
-      "image": "https://i.imgur.com/6d9H4aC.png",
-      "specs": {
-        "processor": "Apple A15",
-        "screen": "6.1 OLED",
-        "camera": "12 MP",
-        "camera_details": "Dual OIS",
-        "video": "4K",
-        "battery": "3279 mAh",
-        "charging": "20W",
-        "audio": "Stereo",
-        "jack": "No",
-        "os": "iOS",
-        "colors": ["Black", "Blue"]
-      }
-    },
-    {
-      "name": "iPhone 13",
-      "price": 700,
-      "image": "https://i.imgur.com/m2ZyK4M.png",
-      "specs": {
-        "processor": "Apple A15",
-        "screen": "6.1 OLED",
-        "camera": "12 MP",
-        "camera_details": "Dual",
-        "video": "4K",
-        "battery": "3240 mAh",
-        "charging": "20W",
-        "audio": "Stereo",
-        "jack": "No",
-        "os": "iOS",
-        "colors": ["Black", "Pink"]
-      }
-    },
-    {
-      "name": "Samsung Galaxy A54",
+      "name": "Tecno Camon 30 Premier",
       "price": 400,
-      "image": "https://i.imgur.com/7qv9K4H.png",
+      "image": "https://fdn2.gsmarena.com/vv/bigpic/tecno-camon-30-premier.jpg",
       "specs": {
-        "processor": "Exynos 1380",
-        "screen": "6.4 AMOLED 120Hz",
-        "camera": "50 MP",
-        "camera_details": "OIS",
-        "video": "4K",
+        "processor": "Dimensity 8200 Ultimate",
+        "screen": "6.77 LTPO AMOLED",
+        "camera": "50 MP + 50 MP + 50 MP",
         "battery": "5000 mAh",
-        "charging": "25W",
-        "audio": "Stereo",
-        "jack": "No",
-        "os": "Android",
-        "colors": ["Black", "Purple"]
+        "os": "Android 14",
+        "colors": ["Black", "Silver"]
       }
     },
     {
-      "name": "Xiaomi Redmi Note 12",
-      "price": 200,
-      "image": "https://i.imgur.com/Jh9Z1qE.png",
+      "name": "Samsung Galaxy Z Fold6",
+      "price": 1899,
+      "image": "https://fdn2.gsmarena.com/vv/bigpic/samsung-galaxy-z-fold6.jpg",
       "specs": {
-        "processor": "Snapdragon 685",
-        "screen": "6.67 AMOLED",
-        "camera": "50 MP",
-        "camera_details": "Wide",
-        "video": "1080p",
-        "battery": "5000 mAh",
-        "charging": "33W",
-        "audio": "Mono",
-        "jack": "Yes",
-        "os": "Android",
-        "colors": ["Black", "Blue"]
+        "processor": "Snapdragon 8 Gen 3",
+        "screen": "7.6 Foldable Dynamic AMOLED",
+        "camera": "50 MP + 10 MP + 12 MP",
+        "battery": "4400 mAh",
+        "os": "Android 14",
+        "colors": ["Silver Shadow", "Pink", "Navy"]
       }
     },
     {
-      "name": "Infinix Hot 10T",
-      "price": 150,
-      "image": "https://i.imgur.com/RnJQe8Q.png",
+      "name": "iPhone 15",
+      "price": 799,
+      "image": "https://fdn2.gsmarena.com/vv/bigpic/apple-iphone-15.jpg",
       "specs": {
-        "processor": "Helio G70",
-        "screen": "6.82 LCD",
-        "camera": "48 MP",
-        "camera_details": "Triple",
-        "video": "1080p",
+        "processor": "Apple A16 Bionic",
+        "screen": "6.1 Super Retina XDR",
+        "camera": "48 MP + 12 MP",
+        "battery": "3349 mAh",
+        "os": "iOS 17",
+        "colors": ["Black", "Blue", "Pink"]
+      }
+    },
+    {
+      "name": "Redmi 13C",
+      "price": 120,
+      "image": "https://fdn2.gsmarena.com/vv/bigpic/xiaomi-redmi-13c.jpg",
+      "specs": {
+        "processor": "Helio G85",
+        "screen": "6.74 IPS LCD",
+        "camera": "50 MP + 2 MP",
         "battery": "5000 mAh",
-        "charging": "18W",
-        "audio": "Mono",
-        "jack": "Yes",
-        "os": "Android",
-        "colors": ["Black", "Purple"]
+        "os": "Android 13",
+        "colors": ["Black", "Blue", "Green"]
+      }
+    },
+    {
+      "name": "Samsung Galaxy A05s",
+      "price": 140,
+      "image": "https://fdn2.gsmarena.com/vv/bigpic/samsung-galaxy-a05s.jpg",
+      "specs": {
+        "processor": "Snapdragon 680",
+        "screen": "6.7 PLS LCD",
+        "camera": "50 MP + 2 MP + 2 MP",
+        "battery": "5000 mAh",
+        "os": "Android 13",
+        "colors": ["Black", "Silver", "Light Green"]
       }
     }
   ]
