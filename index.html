@@ -75,21 +75,26 @@ header h1 {
   <p>دليل الهواتف الذكية</p>
 </header>
 
-<div id="phones"></div>
+<div id="phones">جارٍ التحميل...</div>
 
 <script>
-fetch("phones.json")
-.then(res => res.json())
-.then(data => {
-  const container = document.getElementById("phones");
-  container.innerHTML = data.phones.map(p => `
-    <div class="phone-card" onclick="openPhone(${p.id})">
-      <img src="${p.image}" alt="${p.name}">
-      <div class="phone-name">${p.name}</div>
-      <div class="phone-price">$${p.price}</div>
-    </div>
-  `).join("");
-});
+fetch("./phones.json")
+  .then(res => res.json())
+  .then(data => {
+    const container = document.getElementById("phones");
+    container.innerHTML = data.phones.map(p => `
+      <div class="phone-card" onclick="openPhone(${p.id})">
+        <img src="${p.image}" alt="${p.name}">
+        <div class="phone-name">${p.name}</div>
+        <div class="phone-price">$${p.price}</div>
+      </div>
+    `).join("");
+  })
+  .catch(err => {
+    document.getElementById("phones").innerHTML =
+      "<p style='color:red;text-align:center'>فشل تحميل البيانات</p>";
+    console.error(err);
+  });
 
 function openPhone(id) {
   window.location.href = "phone.html?id=" + id;
